@@ -37,6 +37,12 @@ public class Main {
         List<Employee> duplicates = new LinkedList<>();
 
         for (Employee employee : employees) {
+
+            if(employee == null){
+                System.out.println("null record");
+                continue;
+            }
+
             if (!seen.add(employee)) {
                 duplicates.add(employee);
             }
@@ -50,6 +56,10 @@ public class Main {
         Map<Integer, Employee> uniqueEmployees = new HashMap<>();
 
         for (Employee employee : employees) {
+            if(employee == null){
+                System.out.println("null record");
+                continue;
+            }
             if (!seen.add(employee)) {
                 continue;
             }
@@ -67,6 +77,11 @@ public class Main {
 
 
         for (Employee duplicate : duplicates) {
+
+            if(duplicate == null){
+                System.out.println("null record");
+                continue;
+            }
 
             uniqueEmployees.remove(duplicate.getId());
         }
